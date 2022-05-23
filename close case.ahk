@@ -3,6 +3,23 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+; Vind het monitor nummer
+GetCurrentMonitor()
+{
+  SysGet, numberOfMonitors, MonitorCount
+  WinGetPos, winX, winY, winWidth, winHeight, A
+  winMidX := winX + winWidth / 2
+  winMidY := winY + winHeight / 2
+  Loop %numberOfMonitors%
+  {
+    SysGet, monArea, Monitor, %A_Index%
+    if (winMidX > monAreaLeft && winMidX < monAreaRight && winMidY < monAreaBottom && winMidY > monAreaTop)
+      return A_Index
+  }
+  SysGet, primaryMonitor, MonitorPrimary
+  return "No Monitor Found"
+}
+
 #IfWinActive ahk_exe clarify.exe  ;  hotkeys werken enkel in clarify
 ; muis 2 (forward) of pijltje links voor case t&i
 xButton2::
