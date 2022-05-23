@@ -20,6 +20,14 @@ GetCurrentMonitor()
   return "No Monitor Found"
 }
 
+; Vind resolutie van gegeven monitor
+FindRes(Monnumb)
+{
+SysGet, BoundingCoordinates, Monitor, Monnumb
+global ResolutionWidth := BoundingCoordinatesRight - BoundingCoordinatesLeft
+global ResolutionHeight := BoundingCoordinatesBottom - BoundingCoordinatesTop
+}
+
 #IfWinActive ahk_exe clarify.exe  ;  hotkeys werken enkel in clarify
 ; muis 2 (forward) of pijltje links voor case t&i
 xButton2::
