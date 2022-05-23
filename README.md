@@ -1,2 +1,2 @@
-# AHK-clsoing-case
-Scriptje oor het automatisch sluiten van cases
+# AHK-closing-case
+Scriptje voor het automatisch sluiten van cases
