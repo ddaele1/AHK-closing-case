@@ -29,7 +29,7 @@ global ResolutionHeight := BoundingCoordinatesBottom - BoundingCoordinatesTop
 }
 
 ; Geef correcte click coordinaten door
-SetClickCoordinates()
+SetClickCoordinates(ResolutionWidth, ResolutionHeight)
 {
 if (ResolutionWidth = 1920 && ResolutionHeight = 1080)
 {
@@ -50,7 +50,7 @@ xButton2::
 Left::
 MNumb := GetCurrentMonitor()
 FindRes(MNumb)
-SetClickCoordinates()
+SetClickCoordinates(ResolutionWidth, ResolutionHeight)
 Click, %Click1a% %Click1b%
 Click, %Click2a% %Click2b%
 Send, {Home}
