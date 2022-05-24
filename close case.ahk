@@ -28,18 +28,37 @@ global ResolutionWidth := BoundingCoordinatesRight - BoundingCoordinatesLeft
 global ResolutionHeight := BoundingCoordinatesBottom - BoundingCoordinatesTop
 }
 
+; Geef correcte click coordinaten door
+SetClickCoordinates()
+{
+if (ResolutionWidth = 1920 && ResolutionHeight = 1080)
+{
+global Click1a := 1840
+global Click1b := 780
+global Click2a := 320
+global Click2b := 278
+global Click3a := 960
+global Click3b := 315
+}
+}
+
+
 #IfWinActive ahk_exe clarify.exe  ;  hotkeys werken enkel in clarify
+
 ; muis 2 (forward) of pijltje links voor case t&i
 xButton2::
 Left::
-Click 1840 780
-Click, 320 278
+MNumb := GetCurrentMonitor()
+FindRes(MNumb)
+SetClickCoordinates()
+Click, %Click1a% %Click1b%
+Click, %Click2a% %Click2b%
 Send, {Home}
 Send, {tab}
 Send, t
 Send, {tab}
 Send, j
-Click, 960 315
+Click, %Click3a% %Click3b%
 Send, {End}
 Send, {Enter}
 return
@@ -47,7 +66,7 @@ return
 ; muis 1 (back) of pijltje rechts voor case idtv
 XButton1::
 Right::
-Click 1840 780
+Click, 1840 780
 Click, 320 278
 Send, {Home}
 Send, {tab}
@@ -63,7 +82,7 @@ return
 MButton::
 Up::
 Down::
-Click 1840 780
+Click, 1840 780
 Click, 320 278
 Send, {Home}
 Send, {tab}
