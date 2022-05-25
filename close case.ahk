@@ -66,14 +66,17 @@ return
 ; muis 1 (back) of pijltje rechts voor case idtv
 XButton1::
 Right::
-Click, 1840 780
-Click, 320 278
+MNumb := GetCurrentMonitor()
+FindRes(MNumb)
+SetClickCoordinates(ResolutionWidth, ResolutionHeight)
+Click, %Click1a% %Click1b%
+Click, %Click2a% %Click2b%
 Send, {Home}
 Send, {tab}
 Send, i
 Send, {tab}
 Send, j
-Click, 960 315
+Click, %Click3a% %Click3b%
 Send, {End}
 Send, {Enter}
 return
@@ -82,14 +85,18 @@ return
 MButton::
 Up::
 Down::
-Click, 1840 780
-Click, 320 278
+MNumb := GetCurrentMonitor()
+FindRes(MNumb)
+SetClickCoordinates(ResolutionWidth, ResolutionHeight)
+Click, %Click1a% %Click1b%
+Click, %Click2a% %Click2b%
 Send, {Home}
 Send, {tab}
 Send, a
 Send, {tab}
 Send, j
-Click, 960 315
+Click, %Click3a% %Click3b%
 Send, {End}
 Send, {Enter}
+return
 return
