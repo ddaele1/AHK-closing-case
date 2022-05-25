@@ -45,6 +45,7 @@ else
 MsgBox Deze resolutie wordt nog niet ondersteund. Contacteer Daan om deze te laten toevoegen.
 ExitApp
 }
+}
 
 
 #IfWinActive ahk_exe clarify.exe  ;  hotkeys werken enkel in clarify
