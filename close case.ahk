@@ -40,6 +40,10 @@ global Click2b := 278
 global Click3a := 960
 global Click3b := 315
 }
+else if (ResolutionWidth = 2256 && ResolutionHeight = 1504)
+{
+; Under construction
+}
 else
 {
 MsgBox Deze resolutie wordt nog niet ondersteund. Contacteer Daan om deze te laten toevoegen.
