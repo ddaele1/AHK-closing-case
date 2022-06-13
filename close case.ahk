@@ -46,7 +46,7 @@ else if (ResolutionWidth = 2256 && ResolutionHeight = 1504)
 }
 else
 {
-MsgBox Deze resolutie wordt nog niet ondersteund. Contacteer Daan om deze te laten toevoegen.
+MsgBox Deze resolutie wordt(nog)niet standaard ondersteund. Gebruik aub de configureerbare versie.
 ExitApp
 }
 }
