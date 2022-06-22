@@ -66,19 +66,3 @@ Click, 960 315
 Send, {End}
 Send, {Enter}
 return
-<<<<<<< Updated upstream
-=======
-return
-
-; case id naar klembord
-F7::
-Send, ^+y
-Send, {tab}
-Send, {tab}
-Send, ^c
-Send, {tab}
-Send, {tab}
-Send, {tab}
-Send, {Enter}
-return
->>>>>>> Stashed changes
