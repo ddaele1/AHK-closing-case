@@ -109,3 +109,15 @@ Send, {End}
 Send, {Enter}
 return
 return
+
+; case id naar klembord
+F7::
+Send, ^+y
+Send, {tab}
+Send, {tab}
+Send, ^c
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {Enter}
+return
