@@ -54,9 +54,9 @@ ExitApp
 
 #IfWinActive ahk_exe clarify.exe  ;  hotkeys werken enkel in clarify
 
-; muis 2 (forward) of pijltje links voor case t&i
+; muis 2 (forward) of F2 voor case t&i
 xButton2::
-Left::
+F2::
 MNumb := GetCurrentMonitor()
 FindRes(MNumb)
 SetClickCoordinates(ResolutionWidth, ResolutionHeight)
@@ -72,9 +72,9 @@ Send, {End}
 Send, {Enter}
 return
 
-; muis 1 (back) of pijltje rechts voor case idtv
+; muis 1 (back) of F3 voor case idtv
 XButton1::
-Right::
+F3::
 MNumb := GetCurrentMonitor()
 FindRes(MNumb)
 SetClickCoordinates(ResolutionWidth, ResolutionHeight)
@@ -90,10 +90,9 @@ Send, {End}
 Send, {Enter}
 return
 
-; muiswiel en pijltj omhoog(of omlaag) voor case admin(billing)
+; muiswiel en F4 voor case admin(billing)
 MButton::
-Up::
-Down::
+F4::
 MNumb := GetCurrentMonitor()
 FindRes(MNumb)
 SetClickCoordinates(ResolutionWidth, ResolutionHeight)
