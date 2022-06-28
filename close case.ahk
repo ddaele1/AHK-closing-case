@@ -42,7 +42,12 @@ global Click3b := 315
 }
 else if (ResolutionWidth = 2256 && ResolutionHeight = 1504)
 {
-; Under construction
+global Click1a := 2185
+global Click1b := 1079
+global Click2a := 385
+global Click2b := 391
+global Click3a := 1164
+global Click3b := 471
 }
 else
 {
